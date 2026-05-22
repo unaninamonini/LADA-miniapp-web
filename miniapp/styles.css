@@ -908,7 +908,9 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 8px;
   color: var(--ink);
+  max-width: 100%;
   min-height: 48px;
+  min-width: 0;
   outline: 0;
   padding: 11px;
   width: 100%;
