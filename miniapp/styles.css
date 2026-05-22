@@ -139,17 +139,21 @@ p {
 }
 
 .cover-copy {
-  bottom: 184px;
+  bottom: 126px;
   left: 10px;
-  max-width: 380px;
+  max-width: 410px;
   position: absolute;
   z-index: 3;
 }
 
 .cover-copy::before {
-  background: linear-gradient(90deg, rgba(5, 2, 6, 0.9), rgba(5, 2, 6, 0.3), transparent);
+  backdrop-filter: blur(7px);
+  background:
+    linear-gradient(90deg, rgba(5, 2, 6, 0.58), rgba(5, 2, 6, 0.18), transparent),
+    linear-gradient(180deg, rgba(255, 244, 239, 0.1), transparent 64%);
+  border-left: 1px solid rgba(255, 244, 239, 0.22);
   content: "";
-  inset: -16px 0 -12px -14px;
+  inset: -18px 0 -15px -14px;
   pointer-events: none;
   position: absolute;
   z-index: -1;
@@ -180,8 +184,8 @@ h3 {
 h1 {
   font-size: clamp(58px, 16vw, 124px);
   line-height: 0.8;
-  margin-bottom: 14px;
-  text-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  margin-bottom: 16px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.52);
 }
 
 h1 span {
@@ -194,22 +198,12 @@ h1 span {
 
 .lede {
   color: var(--text);
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 1.18;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.14;
   margin-bottom: 0;
-  max-width: 320px;
-  text-shadow: 0 2px 16px #000;
-}
-
-.cover-actions {
-  bottom: 122px;
-  display: flex;
-  gap: 9px;
-  left: 10px;
-  position: absolute;
-  right: 10px;
-  z-index: 3;
+  max-width: 350px;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.86);
 }
 
 .chrome-action,
@@ -945,7 +939,7 @@ textarea {
   }
 
   .cover-copy {
-    bottom: 220px;
+    bottom: 164px;
     left: 24px;
     max-width: 540px;
   }
@@ -953,12 +947,6 @@ textarea {
   .lede {
     font-size: 21px;
     max-width: 420px;
-  }
-
-  .cover-actions {
-    left: 24px;
-    right: auto;
-    width: 520px;
   }
 
   .home-stage,
