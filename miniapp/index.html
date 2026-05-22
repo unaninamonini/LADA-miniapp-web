@@ -6,88 +6,92 @@
     <title>LADA Mini App</title>
     <link rel="stylesheet" href="./styles.css" />
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script src="./app.js" type="module"></script>
+    <script>
+      window.Telegram?.WebApp?.ready();
+    </script>
+    <script src="./app.js" defer></script>
   </head>
   <body>
     <div class="app-shell">
       <header class="cover">
-        <div class="cover-media" aria-hidden="true">
-          <img class="cover-portrait" src="./assets/braids-cover-ref.png" alt="" />
-          <img class="cover-scrap cover-scrap-a" src="./assets/editorial-collage-ref.png" alt="" />
-          <img class="cover-scrap cover-scrap-b" src="./assets/select-ui-ref.png" alt="" />
-        </div>
+        <figure class="cover-shot">
+          <img src="./assets/hero/lada-cover.jpg" alt="Портрет с брейдами" />
+        </figure>
+        <div class="cover-veil" aria-hidden="true"></div>
         <div class="cover-copy">
-          <p class="eyebrow">braid studio // mini app</p>
+          <p class="eyebrow">Braid artist</p>
           <h1><span>LADA</span> Braids</h1>
-          <p class="lede">Glossy braids, sharp slots, main-character finish.</p>
-          <div class="cover-actions">
-            <button class="chrome-action" data-jump="booking" type="button">Записаться</button>
-            <button class="ghost-action" data-jump="catalog" type="button">Каталог</button>
-          </div>
+          <p class="lede">Глянцевые брейды для образа, который не просит разрешения.</p>
         </div>
-        <div class="cover-badges" aria-hidden="true">
-          <span>Y2K</span>
-          <span>chrome</span>
-          <span>glam</span>
+        <div class="cover-actions">
+          <button class="chrome-action" data-jump="booking" type="button">Записаться</button>
+          <button class="ghost-action" data-jump="catalog" type="button">Смотреть работы</button>
+        </div>
+        <div class="cover-tags" aria-hidden="true">
+          <span>gloss</span>
+          <span>heat</span>
+          <span>braids</span>
+        </div>
+        <div class="cover-mark" aria-hidden="true">
+          <strong>01</strong>
+          <span>cover look</span>
         </div>
       </header>
 
       <main class="workspace">
-        <section class="runtime-strip">
-          <div>
-            <small>Telegram user</small>
-            <strong id="telegram-user">Не передан</strong>
-          </div>
-          <div>
-            <small>Theme</small>
-            <strong id="telegram-theme">Системная</strong>
-          </div>
-          <p class="mode" id="runtime-mode">Browser preview</p>
-          <button id="ready-button" type="button">Связь с ботом</button>
-        </section>
-
         <nav class="tabs" aria-label="Разделы Mini App">
-          <button class="tab is-active" data-view="home" type="button">Cover</button>
+          <button class="tab is-active" data-view="home" type="button">Home</button>
           <button class="tab" data-view="catalog" type="button">Каталог</button>
           <button class="tab" data-view="booking" type="button">Запись</button>
         </nav>
 
         <section class="view is-active" data-panel="home">
-          <section class="poster-grid">
-            <article class="feature-tile chrome-tile">
-              <p>01</p>
-              <h2>Собери образ</h2>
-              <span>брейды, канекалон, допы</span>
+          <section class="home-stage">
+            <article class="editorial-note">
+              <p class="eyebrow">Look book</p>
+              <h2>Выбери плетение, слот и цветовой вайб.</h2>
+              <button class="text-action" data-jump="catalog" type="button">Открыть каталог</button>
             </article>
-            <article class="feature-tile glam-tile">
-              <p>02</p>
-              <h2>Поймай слот</h2>
-              <span>выбор даты и времени</span>
+            <article class="slot-note">
+              <strong>Запись</strong>
+              <span>услуга</span>
+              <span>дата</span>
+              <span>контакт</span>
+              <button data-jump="booking" type="button">Собрать заявку</button>
             </article>
-            <article class="feature-tile ui-tile">
-              <img src="./assets/void-ui-ref.png" alt="" />
-              <strong>poster mode</strong>
-            </article>
+          </section>
+          <section class="star-poster">
+            <figure>
+              <img src="./assets/hero/lada-star-poster.jpg" alt="Постер LADA с брейдами" loading="lazy" />
+            </figure>
+            <div>
+              <p class="eyebrow">Style file</p>
+              <h2>Косы до пола. Финиш как обложка.</h2>
+              <button class="text-action" data-jump="catalog" type="button">Смотреть работы</button>
+            </div>
           </section>
         </section>
 
         <section class="view" data-panel="catalog">
-          <div class="catalog-stage">
-            <header>
-              <p class="eyebrow">select your braid era</p>
-              <h2>Каталог</h2>
-            </header>
-            <div class="service-list catalog-list" id="catalog-list"></div>
+          <div class="catalog-stage surface">
+            <div class="stage-body">
+              <header>
+                <p class="eyebrow">Work archive</p>
+                <h2>Каталог</h2>
+              </header>
+              <div class="service-list catalog-list" id="catalog-list"></div>
+            </div>
           </div>
         </section>
 
         <section class="view" data-panel="booking">
-          <div class="booking-shell">
-            <header class="booking-head">
-              <p class="eyebrow">booking flow</p>
-              <h2>Запись</h2>
-            </header>
-            <form id="booking-form">
+          <div class="booking-shell surface">
+            <div class="stage-body">
+              <header class="booking-head">
+                <p class="eyebrow">Book a look</p>
+                <h2>Запись</h2>
+              </header>
+              <form id="booking-form">
               <section class="form-step">
                 <h3>1. Услуга</h3>
                 <div class="choice-grid" id="section-choices"></div>
@@ -147,7 +151,8 @@
                 Отправить заявку
               </button>
               <p class="status" id="booking-status" role="status"></p>
-            </form>
+              </form>
+            </div>
           </div>
         </section>
       </main>

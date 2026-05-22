@@ -1,10 +1,8 @@
 const telegram = window.Telegram?.WebApp;
+const appShell = document.querySelector(".app-shell");
 const tabs = document.querySelectorAll("[data-view]");
 const panels = document.querySelectorAll("[data-panel]");
-const runtimeMode = document.querySelector("#runtime-mode");
-const telegramUser = document.querySelector("#telegram-user");
-const telegramTheme = document.querySelector("#telegram-theme");
-const readyButton = document.querySelector("#ready-button");
+const jumps = document.querySelectorAll("[data-jump]");
 const form = document.querySelector("#booking-form");
 const bookingDate = document.querySelector("#booking-date");
 const sectionChoices = document.querySelector("#section-choices");
@@ -28,6 +26,7 @@ const catalogList = document.querySelector("#catalog-list");
 
 const state = {
   catalog: null,
+  photoManifest: {},
   section: null,
   service: null,
   genderId: "",
@@ -38,6 +37,7 @@ const state = {
 };
 
 function switchView(view) {
+  appShell.dataset.view = view;
   tabs.forEach((tab) => tab.classList.toggle("is-active", tab.dataset.view === view));
   panels.forEach((panel) => panel.classList.toggle("is-active", panel.dataset.panel === view));
 }
@@ -47,22 +47,8 @@ function describeTelegramRuntime() {
     return;
   }
 
-  const user = telegram.initDataUnsafe?.user;
-
   telegram.ready();
   telegram.expand();
-
-  runtimeMode.textContent = `Telegram ${telegram.platform || "client"}`;
-  telegramUser.textContent = user
-    ? [user.first_name, user.last_name, user.username && `@${user.username}`]
-        .filter(Boolean)
-        .join(" ")
-    : "Откроется внутри Telegram";
-  telegramTheme.textContent = telegram.colorScheme || "telegram";
-}
-
-function sendReadySignal() {
-  sendToBot({ action: "miniapp_ready", sent_at: new Date().toISOString() });
 }
 
 function sendToBot(payload) {
@@ -136,15 +122,44 @@ function resetServiceDetails(service) {
 
 function renderCatalog() {
   catalogList.innerHTML = allServices()
-    .map(
-      ({ section, service }) => `
+    .map(({ section, service }) => renderCatalogWindow(section, service))
+    .join("");
+}
+
+function renderCatalogWindow(section, service) {
+  const photos = state.photoManifest[service.id] || [];
+  const gallery = photos.length
+    ? `
+      <div class="catalog-gallery" aria-label="Фото работ: свайпайте в стороны">
+        ${photos
+          .map(
+            (photo, index) => `
+              <figure class="catalog-slide">
+                <img src="${escapeHtml(photo)}" alt="${escapeHtml(service.name)} ${index + 1}" loading="lazy" />
+              </figure>
+            `,
+          )
+          .join("")}
+      </div>
+      ${photos.length > 1 ? '<small class="catalog-swipe">Свайп фото</small>' : ""}
+    `
+    : '<span class="catalog-photo-empty" aria-hidden="true"></span>';
+
+  return `
+    <article class="catalog-window">
+      <header class="window-bar">
+        <strong>${escapeHtml(service.id)}.jpg</strong>
+        <span aria-hidden="true">_ [] X</span>
+      </header>
+      <div class="catalog-card">
+        ${gallery}
         <button class="service-item" data-catalog-service="${escapeHtml(service.id)}" type="button">
           <strong>${escapeHtml(service.name)}</strong>
           <small>${escapeHtml(section.name)} | ${rubles(service.price_from)}</small>
         </button>
-      `,
-    )
-    .join("");
+      </div>
+    </article>
+  `;
 }
 
 function renderSections() {
@@ -328,11 +343,15 @@ function findService(id) {
 
 async function loadCatalog() {
   try {
-    const response = await fetch("../data/catalog.json");
-    if (!response.ok) {
-      throw new Error(`Catalog HTTP ${response.status}`);
+    const [catalogResponse, photoResponse] = await Promise.all([
+      fetch("../data/catalog.json"),
+      fetch("./assets/catalog/manifest.json"),
+    ]);
+    if (!catalogResponse.ok) {
+      throw new Error(`Catalog HTTP ${catalogResponse.status}`);
     }
-    state.catalog = await response.json();
+    state.catalog = await catalogResponse.json();
+    state.photoManifest = photoResponse.ok ? await photoResponse.json() : {};
     bookingDate.min = todayInputValue();
     renderCatalog();
     renderSections();
@@ -461,6 +480,10 @@ tabs.forEach((tab) => {
   tab.addEventListener("click", () => switchView(tab.dataset.view));
 });
 
-readyButton.addEventListener("click", sendReadySignal);
+jumps.forEach((button) => {
+  button.addEventListener("click", () => switchView(button.dataset.jump));
+});
+
 describeTelegramRuntime();
+switchView("home");
 loadCatalog();
