@@ -881,6 +881,10 @@ h3 {
   margin-bottom: 14px;
 }
 
+#options-field {
+  margin-top: 12px;
+}
+
 .field > span {
   color: var(--muted);
   font-size: 11px;
