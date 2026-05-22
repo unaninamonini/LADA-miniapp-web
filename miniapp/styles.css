@@ -765,7 +765,12 @@ h3 {
 }
 
 .training-photo-slot img {
+  height: auto;
   object-fit: contain;
+}
+
+.training-photo-slot {
+  aspect-ratio: auto;
 }
 
 .training-gif-slot {
