@@ -24,6 +24,7 @@ const bookingSummary = document.querySelector("#booking-summary");
 const bookingStatus = document.querySelector("#booking-status");
 const submitBooking = document.querySelector("#submit-booking");
 const catalogList = document.querySelector("#catalog-list");
+const catalogLayoutButtons = document.querySelectorAll("[data-catalog-layout]");
 const trainingPhotoGallery = document.querySelector("#training-photo-gallery");
 const trainingGifGallery = document.querySelector("#training-gif-gallery");
 const phoneCopy = document.querySelector("[data-phone-copy]");
@@ -34,6 +35,7 @@ const state = {
   catalog: null,
   photoManifest: {},
   trainingManifest: {},
+  catalogLayout: "list",
   section: null,
   service: null,
   genderId: "",
@@ -44,11 +46,6 @@ const state = {
 };
 
 function scrollToView(view) {
-  if (view === "home") {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    return;
-  }
-
   document.querySelector(`[data-panel="${view}"]`)?.scrollIntoView({
     behavior: "smooth",
     block: "start",
@@ -144,6 +141,7 @@ function resetServiceDetails(service) {
 }
 
 function renderCatalog() {
+  catalogList.dataset.layout = state.catalogLayout;
   catalogList.innerHTML = allServices()
     .map(({ section, service }) => renderCatalogWindow(section, service))
     .join("");
@@ -234,6 +232,18 @@ function renderTrainingGif(gif, index) {
 function renderTrainingMedia() {
   renderTrainingPhotos();
   renderTrainingGifs();
+}
+
+function setCatalogLayout(layout) {
+  state.catalogLayout = layout === "grid" ? "grid" : "list";
+  catalogLayoutButtons.forEach((button) => {
+    const isActive = button.dataset.catalogLayout === state.catalogLayout;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+  if (state.catalog) {
+    renderCatalog();
+  }
 }
 
 function renderSections() {
@@ -631,6 +641,10 @@ tabs.forEach((tab) => {
   tab.addEventListener("click", () => switchView(tab.dataset.view));
 });
 
+catalogLayoutButtons.forEach((button) => {
+  button.addEventListener("click", () => setCatalogLayout(button.dataset.catalogLayout));
+});
+
 jumps.forEach((button) => {
   button.addEventListener("click", () => switchView(button.dataset.jump));
 });
@@ -647,5 +661,5 @@ phoneCopy?.addEventListener("click", async (event) => {
 });
 
 describeTelegramRuntime();
-switchView("home", false);
+switchView("catalog", false);
 loadCatalog();

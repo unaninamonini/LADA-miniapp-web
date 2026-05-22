@@ -11,7 +11,7 @@
           "wear_time": "5-7 дней",
           "duration_min": 60,
           "duration_max": 120,
-          "photos": ["AgACAgIAAxkBAAMUag6hAeOGRW76Jmo7vGm1pL-G8LAAAiYbaxvNhFFI49KNhZRFSrABAAMCAAN4AAM7BA",
+          "photos": [
             "AgACAgIAAxkBAAMSag6hAaucxS4IZ_eqr0b6y0sKNP4AAiQbaxvNhFFIIUdUYAbYbzoBAAMCAAN5AAM7BA",
             "AgACAgIAAxkBAAMTag6hAfxYxL0RNuxAWFD1Wi7Sq-4AAiIbaxvNhFFI_oUiBQWhtaQBAAMCAAN5AAM7BA",
             "AgACAgIAAxkBAAMYag6hAVHJG92jK-ju82tBm-cSbjcAAiobaxvNhFFIoG-np2SWlEoBAAMCAAN5AAM7BA",
@@ -20,7 +20,8 @@
             "AgACAgIAAxkBAAMXag6hAVk5Uc1UzreBfCf0sqRbocwAAikbaxvNhFFIgClyIOHHEZIBAAMCAAN5AAM7BA",
             "AgACAgIAAxkBAAMZag6hARBqCwRec-yzxvD-J_CIzVcAAisbaxvNhFFIoPXj1YlL9EwBAAMCAAN5AAM7BA",
             "AgACAgIAAxkBAAMbag6hAdprm3Z-6EV4H2hL8_v6-fIAAiMbaxvNhFFI5-ZxhJ1NBykBAAMCAAN5AAM7BA",
-            "AgACAgIAAxkBAAMVag6hAY4mN9vAXtqfbyrxthnvQbAAAicbaxvNhFFIRaM7T3hVPG0BAAMCAAN5AAM7BA"
+            "AgACAgIAAxkBAAMVag6hAY4mN9vAXtqfbyrxthnvQbAAAicbaxvNhFFIRaM7T3hVPG0BAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMUag6hAeOGRW76Jmo7vGm1pL-G8LAAAiYbaxvNhFFI49KNhZRFSrABAAMCAAN4AAM7BA"
           ],
           "options": [
             {"id": "6", "name": "6 шт", "price": 4200, "duration_minutes": 60},
@@ -37,11 +38,11 @@
           "wear_time": "10-14 дней",
           "duration_min": 120,
           "duration_max": 150,
-          "photos": ["AgACAgIAAxkBAANTag_a2XaaMu_0c-IfbSVMrW0IIkMAAjcbaxvNhFFIFFF25jZcI0oBAAMCAAN5AAM7BA",
+          "photos": ["AgACAgIAAxkBAANWag_a2RPtUoVwOGOwwrgzcfeIGZIAAjkbaxvNhFFIDoSIyGkwOYMBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAANTag_a2XaaMu_0c-IfbSVMrW0IIkMAAjcbaxvNhFFIFFF25jZcI0oBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANVag_a2Q7McODGfM9CJ-m9yKBXzJQAAjgbaxvNhFFIUHpN4tGU05MBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANXag_a2dLz5tQfCK9PCKx8JMV3yNoAAjobaxvNhFFIfCet76OhhjYBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANZag_a2bfoudcGZ8ok6s2-sabSvkMAAjsbaxvNhFFIPTf1QmUG5GoBAAMCAAN5AAM7BA",
-          "AgACAgIAAxkBAANWag_a2RPtUoVwOGOwwrgzcfeIGZIAAjkbaxvNhFFIDoSIyGkwOYMBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANaag_a2SJbloMUl2818OgDcL9kcnwAAnobaxvNhFFISLH5v_TkMpIBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANYag_a2TVOjujg5bDJAxIYePwBYs8AAjQbaxvNhFFIv3LdGH82AAE9AQADAgADeQADOwQ",
           "AgACAgIAAxkBAANUag_a2YrvCel-mIULHVxZaa82hUcAAjMbaxvNhFFIW6Y-T0h98JUBAAMCAAN5AAM7BA",
@@ -69,7 +70,7 @@
           "wear_time": "5-7 дней",
           "duration_min": 120,
           "duration_max": 120,
-          "price_from": 6500,
+          "price_from": 10500,
           "photos": ["AgACAgIAAxkBAANkag_bbpemL0oWKTzIhIDpOYToRlcAAlYbaxvNhFFIutef8SGHxZsBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANlag_bbiK9MONo0lxxCI3SV5EdwQcAAlcbaxvNhFFIba0Ky7dzwX4BAAMCAAN4AAM7BA",
           "AgACAgIAAxkBAANmag_bbildiAABE-Lrd3S49P2bmnyqAAJYG2sbzYRRSHAq8T5Jz0bMAQADAgADeQADOwQ"]
@@ -95,10 +96,10 @@
           "duration_min": null,
           "duration_max": null,
           "price_from": null,
-          "photos": ["AgACAgIAAxkBAANwag_cEe3eiqak9ZKyfWJ2S8qHCkYAAmUbaxvNhFFI4yMELLIbYAgBAAMCAAN5AAM7BA",
+          "photos": ["AgACAgIAAxkBAAN2ag_cESwgAAHNHst9mGoS3Qehc0DhAAJpG2sbzYRRSLzsMuuNm9bxAQADAgADeQADOwQ",
+            "AgACAgIAAxkBAANwag_cEe3eiqak9ZKyfWJ2S8qHCkYAAmUbaxvNhFFI4yMELLIbYAgBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANyag_cEXcdQPqtGQVM7F9tcPvYhr8AAmQbaxvNhFFIU2Idl4E_13kBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAAN0ag_cEZW8uuQh_yMnDGPjoiLUy7kAAmYbaxvNhFFINosekuP7pRoBAAMCAAN5AAM7BA",
-          "AgACAgIAAxkBAAN2ag_cESwgAAHNHst9mGoS3Qehc0DhAAJpG2sbzYRRSLzsMuuNm9bxAQADAgADeQADOwQ",
           "AgACAgIAAxkBAAN4ag_cEZcl5jOrulc_Ex7Th4Re6jYAAmsbaxvNhFFIm4ZW68g_rb0BAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAANzag_cEcrr8CCPkqxy6ZCRnm70WloAAmcbaxvNhFFI1RiGH5iBplQBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAAN5ag_cEUFSNoPhlyxZOyPr46MjVt0AAmwbaxvNhFFIJTn9IYGjIioBAAMCAAN5AAM7BA",
@@ -124,7 +125,7 @@
           "wear_time": "до следующего мытья головы",
           "duration_min": 150,
           "duration_max": 150,
-          "price_from": 5200,
+          "price_from": 10500,
           "photos": ["AgACAgIAAxkBAAOIag_cqHsoY-pUxqLDKZ6nllffG6IAAncbaxvNhFFIDh1Jv-WB478BAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAAOJag_cqHAhFWsExiV4wgABPMRXs7w4AAJ2G2sbzYRRSLQRvkZV7e_wAQADAgADeQADOwQ",
           "AgACAgIAAxkBAAOKag_cqLxwi-cAAcu9Qfgclo3_qORYAAJ4G2sbzYRRSI9WdoXbrKsvAQADAgADeQADOwQ"]
@@ -199,12 +200,13 @@
           "duration_min": 180,
           "duration_max": 210,
           "price_from": 10500,
-          "photos": ["AgACAgIAAxkBAAOuag_d9_bOnmAhGf422BhQ0xMYqFMAAk8baxvNhFFIsjvjy-7fKvcBAAMCAAN5AAM7BA",
+          "photos": ["AgACAgIAAxkBAAOxag_d96W9438ZrZUotDMMfFG5azkAAlEbaxvNhFFIay9ixdk0dKkBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAOuag_d9_bOnmAhGf422BhQ0xMYqFMAAk8baxvNhFFIsjvjy-7fKvcBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAAOvag_d90iK0YgEEH7nyrhq5FM95voAAlAbaxvNhFFInXLxR2Dye0oBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAAOyag_d9_GlK-1ORjzUCVJHqoAV1WcAAlIbaxvNhFFIHsCT_i2XOwsBAAMCAAN5AAM7BA",
           "AgACAgIAAxkBAAOwag_d9zWaEViiTyJPKKubXtsRsmAAAk4baxvNhFFI6HQDlD-hisUBAAMCAAN5AAM7BA",
-          "AgACAgIAAxkBAAOzag_d92MKG1PXa4hm_tkjoCG_oTwAAm8baxvNhFFIP_Obk-TCFj8BAAMCAAN5AAM7BA",
-          "AgACAgIAAxkBAAOxag_d96W9438ZrZUotDMMfFG5azkAAlEbaxvNhFFIay9ixdk0dKkBAAMCAAN5AAM7BA"]
+          "AgACAgIAAxkBAAOzag_d92MKG1PXa4hm_tkjoCG_oTwAAm8baxvNhFFIP_Obk-TCFj8BAAMCAAN5AAM7BA"
+          ]
         }
       ]
     }
@@ -266,8 +268,11 @@
   "masterclass": {
     "title": "Обучение",
     "description": "В обучение входят:\n- теоретический материал\n- подарочный базовый набор инструментов для плетения\n- отработка на манекене\n- отработка на модели\n\nСтоимость уточняется индивидуально в зависимости от запроса, напишите Верховной — @moonlightchilld.",
-    "photos": [],
-    "gifs": [],
+    "photos": ["AgACAgUAAxkBAAIBimoQN9OYqjAUVlcZplP7gpduZDCuAAK4EGsb-d6AVMy77_270jxlAQADAgADeQADOwQ",
+    "AgACAgUAAxkBAAIBi2oQN9M-uD1tNBw4EnKHR3TMwdgLAAK5EGsb-d6AVKBId7J4MYE-AQADAgADeQADOwQ"],
+    "gifs": ["BAACAgUAAxkBAAIBjmoQOA1jHwfwL8l1XozJtbdW_G3KAALEIgAC-d6AVP77ZsOnnGeMOwQ",
+    "BAACAgUAAxkBAAIBkGoQOA41oxkfdgNk7S4fi-zTge42AALGIgAC-d6AVHMHHPRiLIGNOwQ",
+    "BAACAgUAAxkBAAIBj2oQOA7_-mDvq5zm0dsnt_V7xgABEgACxSIAAvnegFRsZroclqgBETsE"],
     "directions": [
       {
         "id": "braids",

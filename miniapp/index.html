@@ -21,20 +21,27 @@
 
       <main class="workspace">
         <nav class="tabs" aria-label="Разделы Mini App">
-          <button class="tab is-active" data-view="home" type="button">Home</button>
-          <button class="tab" data-view="catalog" type="button">Каталог</button>
+          <button class="tab is-active" data-view="catalog" type="button">Каталог</button>
           <button class="tab" data-view="training" type="button">Обучение</button>
           <button class="tab" data-view="booking" type="button">Запись</button>
         </nav>
 
-        <section class="view is-active" data-panel="home"></section>
-
-        <section class="view" data-panel="catalog">
+        <section class="view is-active" data-panel="catalog">
           <div class="catalog-stage surface">
             <div class="stage-body">
-              <header>
-                <p class="eyebrow">Work archive</p>
-                <h2>Каталог</h2>
+              <header class="catalog-head">
+                <div>
+                  <p class="eyebrow">Work archive</p>
+                  <h2>Каталог</h2>
+                </div>
+                <div class="catalog-layout" aria-label="Вид каталога">
+                  <button class="is-active" data-catalog-layout="list" aria-pressed="true" type="button">
+                    Список
+                  </button>
+                  <button data-catalog-layout="grid" aria-pressed="false" type="button">
+                    Сетка 4
+                  </button>
+                </div>
               </header>
               <div class="service-list catalog-list" id="catalog-list"></div>
             </div>

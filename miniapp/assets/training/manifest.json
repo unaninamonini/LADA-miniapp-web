@@ -1,4 +1,11 @@
 {
-  "photos": [],
-  "gifs": []
+  "photos": [
+    "./assets/training/training-photo-1.jpg",
+    "./assets/training/training-photo-2.jpg"
+  ],
+  "gifs": [
+    "./assets/training/training-gif-1.MP4",
+    "./assets/training/training-gif-2.MP4",
+    "./assets/training/training-gif-3.MP4"
+  ]
 }
