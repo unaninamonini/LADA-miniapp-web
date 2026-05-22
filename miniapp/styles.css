@@ -622,10 +622,14 @@ h3 {
 .catalog-list[data-layout="grid"] .catalog-slide {
   aspect-ratio: 3 / 4;
   height: auto;
+  position: relative;
 }
 
 .catalog-list[data-layout="grid"] .catalog-slide img {
+  inset: 0;
   object-fit: cover;
+  object-position: center;
+  position: absolute;
 }
 
 .catalog-list[data-layout="grid"] .catalog-photo-empty {
