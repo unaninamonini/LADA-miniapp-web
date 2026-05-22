@@ -430,6 +430,14 @@ h1 span {
   width: 100%;
 }
 
+.star-poster-action {
+  bottom: 20px;
+  justify-self: start;
+  left: 20px;
+  position: absolute;
+  z-index: 1;
+}
+
 .surface {
   overflow: hidden;
 }
