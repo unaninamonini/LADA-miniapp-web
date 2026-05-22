@@ -38,6 +38,7 @@
         <nav class="tabs" aria-label="Разделы Mini App">
           <button class="tab is-active" data-view="home" type="button">Home</button>
           <button class="tab" data-view="catalog" type="button">Каталог</button>
+          <button class="tab" data-view="training" type="button">Обучение</button>
           <button class="tab" data-view="booking" type="button">Запись</button>
         </nav>
 
@@ -46,7 +47,18 @@
             <figure>
               <img src="./assets/hero/lada-star-poster.jpg" alt="Постер LADA с брейдами" loading="lazy" />
             </figure>
-            <button class="text-action star-poster-action" data-jump="catalog" type="button">Смотреть работы</button>
+            <div class="star-poster-controls">
+              <button class="text-action" data-jump="catalog" type="button">Смотреть работы</button>
+              <details class="star-contacts">
+                <summary class="text-action">Контакты</summary>
+                <div class="contact-popover">
+                  <strong>Верховная</strong>
+                  <a href="tel:+79161879507">Телефон: 89161879507</a>
+                  <a href="https://t.me/moonlightchilld">Telegram: @moonlightchilld</a>
+                  <a href="https://www.instagram.com/lada_braidsdesign">Instagram: lada_braidsdesign</a>
+                </div>
+              </details>
+            </div>
           </section>
         </section>
 
@@ -58,6 +70,62 @@
                 <h2>Каталог</h2>
               </header>
               <div class="service-list catalog-list" id="catalog-list"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" data-panel="training">
+          <div class="training-stage surface">
+            <div class="stage-body">
+              <header>
+                <p class="eyebrow">Braid class</p>
+                <h2>Обучение</h2>
+              </header>
+
+              <div class="training-copy">
+                <section>
+                  <h3>В обучение входят</h3>
+                  <ul>
+                    <li>теоретический материал</li>
+                    <li>подарочный базовый набор инструментов для плетения</li>
+                    <li>отработка на манекене</li>
+                    <li>отработка на модели</li>
+                  </ul>
+                </section>
+                <p>
+                  Стоимость уточняется индивидуально в зависимости от запроса,
+                  напишите Верховной - <a href="https://t.me/moonlightchilld">@moonlightchilld</a>.
+                </p>
+                <section>
+                  <h3>Направления</h3>
+                  <ul>
+                    <li>Брейды</li>
+                    <li>Прически с канекалоном</li>
+                  </ul>
+                </section>
+              </div>
+
+              <section class="training-media">
+                <h3>Фото обучения</h3>
+                <div class="training-gallery" aria-label="Фото обучения: свайпайте в стороны">
+                  <figure class="training-slot"><span>Фото 1</span></figure>
+                  <figure class="training-slot"><span>Фото 2</span></figure>
+                  <figure class="training-slot"><span>Фото 3</span></figure>
+                  <figure class="training-slot"><span>Фото 4</span></figure>
+                  <figure class="training-slot"><span>Фото 5</span></figure>
+                </div>
+              </section>
+
+              <section class="training-media">
+                <h3>Видео обучения</h3>
+                <div class="training-gallery" aria-label="Видео обучения: свайпайте в стороны">
+                  <figure class="training-slot training-video-slot"><span>Видео 1</span></figure>
+                  <figure class="training-slot training-video-slot"><span>Видео 2</span></figure>
+                  <figure class="training-slot training-video-slot"><span>Видео 3</span></figure>
+                  <figure class="training-slot training-video-slot"><span>Видео 4</span></figure>
+                  <figure class="training-slot training-video-slot"><span>Видео 5</span></figure>
+                </div>
+              </section>
             </div>
           </div>
         </section>
