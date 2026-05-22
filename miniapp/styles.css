@@ -118,6 +118,13 @@ p {
   width: 100%;
 }
 
+.cover-shot .cover-poster-art {
+  background: #130403;
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
+
 .cover-veil {
   border: 1px solid var(--line);
   inset: 12px 0 0;
@@ -402,12 +409,6 @@ h1 span {
   object-fit: cover;
   object-position: center top;
   width: 100%;
-}
-
-.star-poster .star-poster-art {
-  background: #130403;
-  object-fit: contain;
-  object-position: center;
 }
 
 .star-poster-controls {
