@@ -404,6 +404,12 @@ h1 span {
   width: 100%;
 }
 
+.star-poster .star-poster-art {
+  background: #130403;
+  object-fit: contain;
+  object-position: center;
+}
+
 .star-poster-controls {
   bottom: 20px;
   display: grid;
