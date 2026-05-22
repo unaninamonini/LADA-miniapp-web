@@ -118,13 +118,6 @@ p {
   width: 100%;
 }
 
-.cover-shot .cover-poster-art {
-  background: #130403;
-  object-fit: contain;
-  object-position: center;
-  transform: none;
-}
-
 .cover-veil {
   border: 1px solid var(--line);
   inset: 12px 0 0;
@@ -189,7 +182,7 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(58px, 16vw, 124px);
+  font-size: clamp(46px, 12vw, 104px);
   line-height: 0.8;
   margin-bottom: 16px;
   text-shadow: 0 10px 30px rgba(0, 0, 0, 0.52);
@@ -409,6 +402,12 @@ h1 span {
   object-fit: cover;
   object-position: center top;
   width: 100%;
+}
+
+.star-poster .star-poster-art {
+  background: #130403;
+  object-fit: contain;
+  object-position: center;
 }
 
 .star-poster-controls {
