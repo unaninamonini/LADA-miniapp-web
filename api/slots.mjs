@@ -93,7 +93,7 @@ async function fetchBookings(date) {
   return Array.isArray(data.bookings) ? data.bookings : [];
 }
 
-export default async function handler(request) {
+async function getSlots(request) {
   const url = new URL(request.url);
   const date = url.searchParams.get("date") || "";
   const duration = Number(url.searchParams.get("duration"));
@@ -130,3 +130,7 @@ export default async function handler(request) {
     return json({ error: "Slots unavailable" }, 503);
   }
 }
+
+export default {
+  fetch: getSlots,
+};
