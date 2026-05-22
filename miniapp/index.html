@@ -13,20 +13,24 @@
   </head>
   <body>
     <div class="app-shell">
-      <header class="cover">
-        <figure class="cover-shot">
-          <img class="cover-poster-art" src="./assets/hero/lada-red-cover.jpg" alt="Постер LADA" />
-        </figure>
-      </header>
+      <section class="cover-stage">
+        <header class="cover">
+          <figure class="cover-shot">
+            <img class="cover-poster-art" src="./assets/hero/lada-red-cover.jpg" alt="Постер LADA" />
+          </figure>
+        </header>
+
+        <div class="cover-transition">
+          <nav class="tabs" aria-label="Разделы Mini App">
+            <button class="tab is-active" data-view="home" type="button">Home</button>
+            <button class="tab" data-view="catalog" type="button">Каталог</button>
+            <button class="tab" data-view="training" type="button">Обучение</button>
+            <button class="tab" data-view="booking" type="button">Запись</button>
+          </nav>
+        </div>
+      </section>
 
       <main class="workspace">
-        <nav class="tabs" aria-label="Разделы Mini App">
-          <button class="tab is-active" data-view="home" type="button">Home</button>
-          <button class="tab" data-view="catalog" type="button">Каталог</button>
-          <button class="tab" data-view="training" type="button">Обучение</button>
-          <button class="tab" data-view="booking" type="button">Запись</button>
-        </nav>
-
         <section class="view is-active" data-panel="home">
           <section class="star-poster">
             <figure>
