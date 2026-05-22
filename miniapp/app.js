@@ -194,7 +194,7 @@ function renderTrainingPhotos() {
   trainingPhotoGallery.innerHTML = photos
     .map(
       (photo, index) => `
-        <figure class="training-slot training-media-slot">
+        <figure class="training-slot training-photo-slot training-media-slot">
           <img src="${escapeHtml(photo)}" alt="Фото обучения ${index + 1}" loading="lazy" />
         </figure>
       `,

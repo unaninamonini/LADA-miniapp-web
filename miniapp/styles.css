@@ -764,6 +764,10 @@ h3 {
   width: 100%;
 }
 
+.training-photo-slot img {
+  object-fit: contain;
+}
+
 .training-gif-slot {
   aspect-ratio: 9 / 16;
   background:
