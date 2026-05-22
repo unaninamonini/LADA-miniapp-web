@@ -243,27 +243,6 @@ h1 span {
   flex: 1 1 0;
 }
 
-.cover-tags {
-  display: grid;
-  gap: 7px;
-  position: absolute;
-  right: 8px;
-  top: 30px;
-  z-index: 3;
-}
-
-.cover-tags span {
-  backdrop-filter: blur(12px);
-  background: rgba(10, 5, 10, 0.58);
-  border: 1px solid var(--line);
-  font-size: 10px;
-  font-weight: 950;
-  line-height: 1;
-  padding: 9px;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .workspace {
   margin: -100px auto 0;
   max-width: 980px;
