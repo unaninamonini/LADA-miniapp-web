@@ -74,11 +74,9 @@ p {
 
 .cover {
   aspect-ratio: 4 / 5.55;
-  background:
-    linear-gradient(180deg, #8c0704 0%, #280305 62%, #060306 100%);
   margin: 0 auto;
   max-width: 980px;
-  min-height: 100svh;
+  min-height: 0;
   overflow: hidden;
   position: relative;
 }
