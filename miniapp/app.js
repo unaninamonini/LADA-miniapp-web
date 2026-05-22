@@ -24,7 +24,7 @@ const bookingSummary = document.querySelector("#booking-summary");
 const bookingStatus = document.querySelector("#booking-status");
 const submitBooking = document.querySelector("#submit-booking");
 const catalogList = document.querySelector("#catalog-list");
-const catalogLayoutButtons = document.querySelectorAll("[data-catalog-layout]");
+const catalogGridBack = document.querySelector("#catalog-grid-back");
 const trainingPhotoGallery = document.querySelector("#training-photo-gallery");
 const trainingGifGallery = document.querySelector("#training-gif-gallery");
 const phoneCopy = document.querySelector("[data-phone-copy]");
@@ -35,7 +35,8 @@ const state = {
   catalog: null,
   photoManifest: {},
   trainingManifest: {},
-  catalogLayout: "list",
+  catalogLayout: "grid",
+  catalogAnchorId: "",
   section: null,
   service: null,
   genderId: "",
@@ -142,6 +143,7 @@ function resetServiceDetails(service) {
 
 function renderCatalog() {
   catalogList.dataset.layout = state.catalogLayout;
+  catalogGridBack.hidden = state.catalogLayout === "grid";
   catalogList.innerHTML = allServices()
     .map(({ section, service }) => renderCatalogWindow(section, service))
     .join("");
@@ -167,7 +169,7 @@ function renderCatalogWindow(section, service) {
     : '<span class="catalog-photo-empty" aria-hidden="true"></span>';
 
   return `
-    <article class="catalog-window">
+    <article class="catalog-window" data-catalog-window="${escapeHtml(service.id)}">
       <header class="window-bar">
         <strong>${escapeHtml(service.id)}.jpg</strong>
         <span aria-hidden="true">_ [] X</span>
@@ -234,15 +236,25 @@ function renderTrainingMedia() {
   renderTrainingGifs();
 }
 
-function setCatalogLayout(layout) {
-  state.catalogLayout = layout === "grid" ? "grid" : "list";
-  catalogLayoutButtons.forEach((button) => {
-    const isActive = button.dataset.catalogLayout === state.catalogLayout;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-pressed", String(isActive));
+function scrollToCatalogWindow(serviceId) {
+  if (!serviceId) {
+    return;
+  }
+
+  requestAnimationFrame(() => {
+    catalogList.querySelector(`[data-catalog-window="${CSS.escape(serviceId)}"]`)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   });
+}
+
+function setCatalogLayout(layout, focusServiceId = "") {
+  state.catalogLayout = layout === "grid" ? "grid" : "list";
+  state.catalogAnchorId = focusServiceId || state.catalogAnchorId;
   if (state.catalog) {
     renderCatalog();
+    scrollToCatalogWindow(state.catalogAnchorId);
   }
 }
 
@@ -546,6 +558,12 @@ serviceChoices.addEventListener("click", (event) => {
 });
 
 catalogList.addEventListener("click", (event) => {
+  const window = event.target.closest("[data-catalog-window]");
+  if (state.catalogLayout === "grid" && window) {
+    setCatalogLayout("list", window.dataset.catalogWindow);
+    return;
+  }
+
   const button = event.target.closest("[data-catalog-service]");
   if (!button) {
     return;
@@ -641,9 +659,7 @@ tabs.forEach((tab) => {
   tab.addEventListener("click", () => switchView(tab.dataset.view));
 });
 
-catalogLayoutButtons.forEach((button) => {
-  button.addEventListener("click", () => setCatalogLayout(button.dataset.catalogLayout));
-});
+catalogGridBack?.addEventListener("click", () => setCatalogLayout("grid"));
 
 jumps.forEach((button) => {
   button.addEventListener("click", () => switchView(button.dataset.jump));

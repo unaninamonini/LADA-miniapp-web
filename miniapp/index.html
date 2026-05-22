@@ -30,17 +30,10 @@
           <div class="catalog-stage surface">
             <div class="stage-body">
               <header class="catalog-head">
-                <div>
-                  <h2>Каталог</h2>
-                </div>
-                <div class="catalog-layout" aria-label="Вид каталога">
-                  <button class="is-active" data-catalog-layout="list" aria-pressed="true" type="button">
-                    Список
-                  </button>
-                  <button data-catalog-layout="grid" aria-pressed="false" type="button">
-                    Сетка 2
-                  </button>
-                </div>
+                <button class="catalog-back" id="catalog-grid-back" aria-label="Вернуться к сетке" type="button" hidden>
+                  <span aria-hidden="true">&larr;</span>
+                </button>
+                <h2>Каталог</h2>
               </header>
               <div class="service-list catalog-list" id="catalog-list"></div>
             </div>
@@ -51,7 +44,6 @@
           <div class="training-stage surface">
             <div class="stage-body">
               <header>
-                <p class="eyebrow">Braid class</p>
                 <h2>Обучение</h2>
               </header>
 
@@ -107,7 +99,6 @@
           <div class="booking-shell surface">
             <div class="stage-body">
               <header class="booking-head">
-                <p class="eyebrow">Book a look</p>
                 <h2>Запись</h2>
               </header>
               <form id="booking-form">
