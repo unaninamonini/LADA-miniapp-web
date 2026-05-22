@@ -101,6 +101,22 @@ p {
   object-position: center;
 }
 
+.cover::after {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(19, 4, 3, 0.08) 30%,
+    rgba(6, 3, 6, 0.92) 100%
+  );
+  bottom: 0;
+  content: "";
+  height: min(22vw, 210px);
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
 .eyebrow {
   background: rgba(255, 239, 233, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.72);
@@ -384,6 +400,32 @@ h3 {
   font-size: 12px;
   font-weight: 950;
   text-transform: uppercase;
+}
+
+.copy-toast {
+  backdrop-filter: blur(18px);
+  background: rgba(255, 241, 234, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 999px;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.44);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 950;
+  left: 50%;
+  line-height: 1.2;
+  margin: 0;
+  max-width: calc(100% - 44px);
+  padding: 12px 16px;
+  position: fixed;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 14;
+}
+
+.copy-toast.is-error {
+  background: rgba(27, 11, 18, 0.96);
+  color: var(--danger);
 }
 
 .training-copy a {

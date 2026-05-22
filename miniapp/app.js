@@ -24,7 +24,9 @@ const bookingSummary = document.querySelector("#booking-summary");
 const bookingStatus = document.querySelector("#booking-status");
 const submitBooking = document.querySelector("#submit-booking");
 const catalogList = document.querySelector("#catalog-list");
-const phoneCall = document.querySelector("[data-phone-call]");
+const phoneCopy = document.querySelector("[data-phone-copy]");
+const copyToast = document.querySelector("#copy-toast");
+let copyToastTimeout;
 
 const state = {
   catalog: null,
@@ -391,6 +393,40 @@ function setStatus(message, isError = false) {
   bookingStatus.classList.toggle("is-error", isError);
 }
 
+function showCopyToast(message, isError = false) {
+  if (!copyToast) {
+    return;
+  }
+
+  window.clearTimeout(copyToastTimeout);
+  copyToast.textContent = message;
+  copyToast.hidden = false;
+  copyToast.classList.toggle("is-error", isError);
+  copyToastTimeout = window.setTimeout(() => {
+    copyToast.hidden = true;
+  }, 2200);
+}
+
+async function copyText(value) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  const fallback = document.createElement("textarea");
+  fallback.value = value;
+  fallback.setAttribute("readonly", "");
+  fallback.style.position = "fixed";
+  fallback.style.opacity = "0";
+  document.body.append(fallback);
+  fallback.select();
+  const copied = document.execCommand("copy");
+  fallback.remove();
+  if (!copied) {
+    throw new Error("Clipboard copy failed");
+  }
+}
+
 function findSection(id) {
   return state.catalog.sections.find((section) => section.id === id);
 }
@@ -542,9 +578,15 @@ jumps.forEach((button) => {
   button.addEventListener("click", () => switchView(button.dataset.jump));
 });
 
-phoneCall?.addEventListener("click", (event) => {
+phoneCopy?.addEventListener("click", async (event) => {
   event.preventDefault();
-  window.location.href = phoneCall.href;
+  try {
+    await copyText(phoneCopy.dataset.phoneNumber);
+    showCopyToast("Номер скопирован в буфер обмена");
+  } catch (error) {
+    console.error(error);
+    showCopyToast("Не удалось скопировать номер", true);
+  }
 });
 
 describeTelegramRuntime();
