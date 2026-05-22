@@ -24,6 +24,7 @@ const bookingSummary = document.querySelector("#booking-summary");
 const bookingStatus = document.querySelector("#booking-status");
 const submitBooking = document.querySelector("#submit-booking");
 const catalogList = document.querySelector("#catalog-list");
+const phoneCall = document.querySelector("[data-phone-call]");
 
 const state = {
   catalog: null,
@@ -65,6 +66,7 @@ function describeTelegramRuntime() {
 
   telegram.ready();
   telegram.expand();
+  telegram.disableVerticalSwipes?.();
 }
 
 function sendToBot(payload) {
@@ -538,6 +540,11 @@ tabs.forEach((tab) => {
 
 jumps.forEach((button) => {
   button.addEventListener("click", () => switchView(button.dataset.jump));
+});
+
+phoneCall?.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.location.href = phoneCall.href;
 });
 
 describeTelegramRuntime();
