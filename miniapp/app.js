@@ -94,6 +94,10 @@ function rubles(value) {
   return Number.isFinite(value) ? `${value} руб.` : "уточняется";
 }
 
+function priceFrom(value) {
+  return Number.isFinite(value) ? `от ${rubles(value)}` : rubles(value);
+}
+
 function formatDuration(minutes) {
   if (!minutes) {
     return "уточняется";
@@ -186,7 +190,7 @@ function renderCatalogWindow(section, service) {
         ${gallery}
         <button class="service-item" data-catalog-service="${escapeHtml(service.id)}" type="button">
           <strong>${escapeHtml(service.name)}</strong>
-          <small>${escapeHtml(section.name)} | ${rubles(service.price_from)}</small>
+          <small>${escapeHtml(section.name)} | ${priceFrom(service.price_from)}</small>
         </button>
       </div>
     </article>
