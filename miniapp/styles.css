@@ -417,6 +417,7 @@ h1 span {
 }
 
 .star-poster figure {
+  grid-column: 1 / -1;
   height: min(130vw, 640px);
   margin: 0;
   overflow: hidden;
@@ -427,21 +428,6 @@ h1 span {
   object-fit: cover;
   object-position: center top;
   width: 100%;
-}
-
-.star-poster div {
-  align-content: end;
-  background: linear-gradient(180deg, rgba(6, 3, 6, 0.05), rgba(6, 3, 6, 0.94));
-  display: grid;
-  margin-top: -188px;
-  min-height: 238px;
-  padding: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.star-poster .text-action {
-  justify-self: start;
 }
 
 .surface {
@@ -821,10 +807,6 @@ textarea {
 
   .star-poster figure {
     height: 680px;
-  }
-
-  .star-poster div {
-    margin-top: 0;
   }
 
   .stage-body {
