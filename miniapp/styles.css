@@ -73,7 +73,7 @@ p {
 }
 
 .cover {
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 5.55;
   margin: 0 auto;
   max-width: 980px;
   min-height: 0;
@@ -98,19 +98,20 @@ p {
 .cover-shot .cover-poster-art {
   background: #130403;
   object-fit: contain;
-  object-position: center;
+  object-position: center top;
 }
 
 .cover::after {
   background: linear-gradient(
     180deg,
     transparent 0%,
-    rgba(19, 4, 3, 0.08) 30%,
+    rgba(19, 4, 3, 0.08) 18%,
+    rgba(8, 3, 6, 0.5) 58%,
     rgba(6, 3, 6, 0.92) 100%
   );
   bottom: 0;
   content: "";
-  height: min(22vw, 210px);
+  height: min(42vw, 400px);
   left: 0;
   pointer-events: none;
   position: absolute;
@@ -313,12 +314,22 @@ h3 {
   position: relative;
 }
 
+.star-poster::before {
+  background: linear-gradient(180deg, rgba(6, 3, 6, 0.16), rgba(6, 3, 6, 0.46));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+}
+
 .star-poster::after {
   background:
     linear-gradient(116deg, transparent 0 18%, rgba(255, 244, 239, 0.24) 31%, transparent 44%),
     repeating-linear-gradient(180deg, transparent 0 96px, rgba(255, 222, 214, 0.08) 96px 98px);
   content: "";
   inset: 0;
+  opacity: 0.62;
   pointer-events: none;
   position: absolute;
 }
@@ -343,7 +354,7 @@ h3 {
   gap: 8px;
   left: 20px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 
 .star-poster-controls .text-action {
