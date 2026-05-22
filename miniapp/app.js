@@ -24,6 +24,8 @@ const bookingSummary = document.querySelector("#booking-summary");
 const bookingStatus = document.querySelector("#booking-status");
 const submitBooking = document.querySelector("#submit-booking");
 const catalogList = document.querySelector("#catalog-list");
+const trainingPhotoGallery = document.querySelector("#training-photo-gallery");
+const trainingGifGallery = document.querySelector("#training-gif-gallery");
 const phoneCopy = document.querySelector("[data-phone-copy]");
 const copyToast = document.querySelector("#copy-toast");
 let copyToastTimeout;
@@ -31,6 +33,7 @@ let copyToastTimeout;
 const state = {
   catalog: null,
   photoManifest: {},
+  trainingManifest: {},
   section: null,
   service: null,
   genderId: "",
@@ -180,6 +183,57 @@ function renderCatalogWindow(section, service) {
       </div>
     </article>
   `;
+}
+
+function renderTrainingPhotos() {
+  const photos = state.trainingManifest.photos || [];
+  if (!trainingPhotoGallery || !photos.length) {
+    return;
+  }
+
+  trainingPhotoGallery.innerHTML = photos
+    .map(
+      (photo, index) => `
+        <figure class="training-slot training-media-slot">
+          <img src="${escapeHtml(photo)}" alt="Фото обучения ${index + 1}" loading="lazy" />
+        </figure>
+      `,
+    )
+    .join("");
+}
+
+function renderTrainingGifs() {
+  const gifs = state.trainingManifest.gifs || [];
+  if (!trainingGifGallery || !gifs.length) {
+    return;
+  }
+
+  trainingGifGallery.innerHTML = gifs
+    .map(
+      (gif, index) => `
+        <figure class="training-slot training-gif-slot training-media-slot">
+          ${renderTrainingGif(gif, index)}
+        </figure>
+      `,
+    )
+    .join("");
+}
+
+function renderTrainingGif(gif, index) {
+  const path = escapeHtml(gif);
+  if (/\.(mp4|webm)$/i.test(gif)) {
+    return `
+      <video src="${path}" aria-label="GIF обучения ${index + 1}"
+        autoplay loop muted playsinline preload="metadata"></video>
+    `;
+  }
+
+  return `<img src="${path}" alt="GIF обучения ${index + 1}" loading="lazy" />`;
+}
+
+function renderTrainingMedia() {
+  renderTrainingPhotos();
+  renderTrainingGifs();
 }
 
 function renderSections() {
@@ -437,17 +491,20 @@ function findService(id) {
 
 async function loadCatalog() {
   try {
-    const [catalogResponse, photoResponse] = await Promise.all([
+    const [catalogResponse, photoResponse, trainingResponse] = await Promise.all([
       fetch("../data/catalog.json"),
       fetch("./assets/catalog/manifest.json"),
+      fetch("./assets/training/manifest.json"),
     ]);
     if (!catalogResponse.ok) {
       throw new Error(`Catalog HTTP ${catalogResponse.status}`);
     }
     state.catalog = await catalogResponse.json();
     state.photoManifest = photoResponse.ok ? await photoResponse.json() : {};
+    state.trainingManifest = trainingResponse.ok ? await trainingResponse.json() : {};
     bookingDate.min = todayInputValue();
     renderCatalog();
+    renderTrainingMedia();
     renderSections();
     updateSummary();
   } catch (error) {

@@ -665,7 +665,22 @@ h3 {
   text-transform: uppercase;
 }
 
-.training-video-slot {
+.training-media-slot {
+  padding: 0;
+}
+
+.training-media-slot::before {
+  z-index: 1;
+}
+
+.training-media-slot img,
+.training-media-slot video {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.training-gif-slot {
   aspect-ratio: 9 / 16;
   background:
     radial-gradient(circle at 50% 42%, rgba(255, 241, 236, 0.24) 0 28px, transparent 29px),
