@@ -750,7 +750,7 @@ h3 {
 }
 
 .training-media-slot {
-  padding: 0;
+  padding: 10px;
 }
 
 .training-media-slot::before {
