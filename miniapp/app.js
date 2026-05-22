@@ -141,6 +141,14 @@ function resetServiceDetails(service) {
   }
 }
 
+function serviceNeedsGender() {
+  return state.service?.id === "own_hair_braids" || state.section?.id === "kanekalon_styles";
+}
+
+function showMaleHairLengthNote() {
+  return state.genderId === "male" && serviceNeedsGender();
+}
+
 function renderCatalog() {
   catalogList.dataset.layout = state.catalogLayout;
   catalogGridBack.hidden = state.catalogLayout === "grid";
@@ -298,11 +306,15 @@ function renderDetails() {
   contactStep.hidden = !state.service;
 
   if (!state.service) {
+    genderField.hidden = true;
+    optionsField.hidden = true;
+    optionChoices.innerHTML = "";
+    hairLengthNote.hidden = true;
     updateSummary();
     return;
   }
 
-  genderField.hidden = state.service.id !== "own_hair_braids";
+  genderField.hidden = !serviceNeedsGender();
   genderChoices.querySelectorAll("button").forEach((button) => {
     button.classList.toggle("is-selected", button.dataset.gender === state.genderId);
   });
@@ -319,7 +331,7 @@ function renderDetails() {
     )
     .join("");
 
-  hairLengthNote.hidden = !(state.service.id === "own_hair_braids" && state.genderId === "male");
+  hairLengthNote.hidden = !showMaleHairLengthNote();
 
   addonChoices.innerHTML = state.catalog.addons
     .map(
@@ -433,7 +445,7 @@ async function renderSlots() {
 function canSubmit() {
   const serviceReady = state.service
     && (!state.service.options?.length || state.option)
-    && (state.service.id !== "own_hair_braids" || state.genderId);
+    && (!serviceNeedsGender() || state.genderId);
 
   return Boolean(
     serviceReady
@@ -573,7 +585,13 @@ catalogList.addEventListener("click", (event) => {
   resetServiceDetails(match.service);
   renderSections();
   renderDetails();
-  switchView("booking");
+  switchView("booking", false);
+  requestAnimationFrame(() => {
+    serviceChoices.querySelector(".service-item.is-selected")?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+  });
 });
 
 genderChoices.addEventListener("click", (event) => {
