@@ -517,10 +517,9 @@ h1 span {
   display: flex;
   gap: 10px;
   overflow-x: auto;
-  overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  touch-action: pan-x;
+  touch-action: pan-x pan-y;
 }
 
 .catalog-gallery::-webkit-scrollbar {
@@ -543,11 +542,13 @@ h1 span {
   margin: 0;
   place-items: center;
   scroll-snap-align: start;
+  touch-action: pan-x pan-y;
 }
 
 .catalog-slide img {
   height: 100%;
   object-fit: contain;
+  touch-action: pan-x pan-y;
   transition: transform 180ms ease;
   width: 100%;
 }

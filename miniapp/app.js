@@ -239,10 +239,7 @@ function renderDetails() {
     )
     .join("");
 
-  hairLengthNote.hidden = !(
-    (state.service.id === "own_hair_braids" && state.genderId === "male")
-      || state.section?.id === "kanekalon_styles"
-  );
+  hairLengthNote.hidden = !(state.service.id === "own_hair_braids" && state.genderId === "male");
 
   addonChoices.innerHTML = state.catalog.addons
     .map(
@@ -274,33 +271,71 @@ function dateForBot(value) {
   return day && month && year ? `${day}.${month}.${year}` : "";
 }
 
-function availableSlots() {
+async function fetchAvailableSlots() {
   if (!state.date || !state.service) {
     return [];
   }
 
-  const slots = [];
-  const selectedDate = new Date(`${state.date}T00:00:00`);
-  const now = new Date();
-
-  for (let total = 10 * 60; total <= 19 * 60 + 30; total += 30) {
-    const slotDate = new Date(selectedDate);
-    slotDate.setHours(Math.floor(total / 60), total % 60, 0, 0);
-    if (slotDate > now) {
-      slots.push(`${String(Math.floor(total / 60)).padStart(2, "0")}:${String(total % 60).padStart(2, "0")}`);
-    }
+  if (state.service.options?.length && !state.option) {
+    return [];
   }
 
-  return slots;
+  const params = new URLSearchParams({
+    date: dateForBot(state.date),
+    duration: String(serviceDuration()),
+  });
+  const response = await fetch(`../api/slots?${params}`);
+  if (!response.ok) {
+    throw new Error(`Slots HTTP ${response.status}`);
+  }
+  const payload = await response.json();
+  return Array.isArray(payload.slots) ? payload.slots : [];
 }
 
-function renderSlots() {
-  const slots = availableSlots();
-  if (!slots.length) {
-    slotChoices.innerHTML = '<p class="empty">Выберите будущую дату.</p>';
+async function renderSlots() {
+  const selectedDate = state.date;
+  const duration = state.service ? serviceDuration() : 0;
+  if (!state.date || !state.service) {
+    slotChoices.innerHTML = '<p class="empty">Выберите услугу и дату.</p>';
     state.startTime = "";
     updateSummary();
     return;
+  }
+
+  if (state.service.options?.length && !state.option) {
+    slotChoices.innerHTML = '<p class="empty">Сначала выберите количество брейдов.</p>';
+    state.startTime = "";
+    updateSummary();
+    return;
+  }
+
+  slotChoices.innerHTML = '<p class="empty">Проверяю свободное время...</p>';
+  let slots = [];
+  try {
+    slots = await fetchAvailableSlots();
+  } catch (error) {
+    console.error(error);
+    if (selectedDate === state.date && duration === serviceDuration()) {
+      slotChoices.innerHTML = '<p class="empty">Не удалось обновить слоты. Попробуйте еще раз.</p>';
+      state.startTime = "";
+      updateSummary();
+    }
+    return;
+  }
+
+  if (selectedDate !== state.date || duration !== serviceDuration()) {
+    return;
+  }
+
+  if (!slots.length) {
+    slotChoices.innerHTML = '<p class="empty">На эту дату свободных слотов нет.</p>';
+    state.startTime = "";
+    updateSummary();
+    return;
+  }
+
+  if (!slots.includes(state.startTime)) {
+    state.startTime = "";
   }
 
   slotChoices.innerHTML = slots

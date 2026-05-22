@@ -42,20 +42,6 @@
         </nav>
 
         <section class="view is-active" data-panel="home">
-          <section class="home-stage">
-            <article class="editorial-note">
-              <p class="eyebrow">Look book</p>
-              <h2>Выбери плетение, слот и цветовой вайб.</h2>
-              <button class="text-action" data-jump="catalog" type="button">Открыть каталог</button>
-            </article>
-            <article class="slot-note">
-              <strong>Запись</strong>
-              <span>услуга</span>
-              <span>дата</span>
-              <span>контакт</span>
-              <button data-jump="booking" type="button">Собрать заявку</button>
-            </article>
-          </section>
           <section class="star-poster">
             <figure>
               <img src="./assets/hero/lada-star-poster.jpg" alt="Постер LADA с брейдами" loading="lazy" />
@@ -92,6 +78,10 @@
                 <h3>1. Услуга</h3>
                 <div class="choice-grid" id="section-choices"></div>
                 <div class="service-list" id="service-choices"></div>
+                <div class="field" id="options-field" hidden>
+                  <span>Количество брейдов</span>
+                  <div class="choice-grid" id="option-choices"></div>
+                </div>
               </section>
 
               <section class="form-step" id="detail-step" hidden>
@@ -103,12 +93,8 @@
                     <button data-gender="male" type="button">Мужские</button>
                   </div>
                 </div>
-                <div class="field" id="options-field" hidden>
-                  <span>Вариант</span>
-                  <div class="choice-grid" id="option-choices"></div>
-                </div>
                 <p class="hair-length-note" id="hair-length-note" hidden>
-                  Плетутся от 8-10 см на свои волосы.
+                  Прически плетутся на свои волосы от 8-10 см.
                 </p>
                 <div class="field">
                   <span>Допы</span>
