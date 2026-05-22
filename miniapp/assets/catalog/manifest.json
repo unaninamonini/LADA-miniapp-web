@@ -10,5 +10,81 @@
     "./assets/catalog/own_hair_braids-8.jpg",
     "./assets/catalog/own_hair_braids-9.jpg",
     "./assets/catalog/own_hair_braids-10.jpg"
+  ],
+  "kanekalon_braids": [
+    "./assets/catalog/kanekalon_braids-1.jpg",
+    "./assets/catalog/kanekalon_braids-2.jpg",
+    "./assets/catalog/kanekalon_braids-3.jpg",
+    "./assets/catalog/kanekalon_braids-4.jpg",
+    "./assets/catalog/kanekalon_braids-5.jpg",
+    "./assets/catalog/kanekalon_braids-6.jpg",
+    "./assets/catalog/kanekalon_braids-7.jpg",
+    "./assets/catalog/kanekalon_braids-8.jpg",
+    "./assets/catalog/kanekalon_braids-9.jpg"
+  ],
+  "sphinx": [
+    "./assets/catalog/sphinx-1.jpg",
+    "./assets/catalog/sphinx-2.jpg",
+    "./assets/catalog/sphinx-3.jpg"
+  ],
+  "high_tail": [
+    "./assets/catalog/high_tail-1.jpg",
+    "./assets/catalog/high_tail-2.jpg",
+    "./assets/catalog/high_tail-3.jpg"
+  ],
+  "creative": [
+    "./assets/catalog/creative-1.jpg",
+    "./assets/catalog/creative-2.jpg",
+    "./assets/catalog/creative-3.jpg",
+    "./assets/catalog/creative-4.jpg",
+    "./assets/catalog/creative-5.jpg",
+    "./assets/catalog/creative-6.jpg",
+    "./assets/catalog/creative-7.jpg",
+    "./assets/catalog/creative-8.jpg",
+    "./assets/catalog/creative-9.jpg",
+    "./assets/catalog/creative-10.jpg"
+  ],
+  "afro_styling": [
+    "./assets/catalog/afro_styling-1.jpg",
+    "./assets/catalog/afro_styling-2.jpg"
+  ],
+  "senegalese_braids": [
+    "./assets/catalog/senegalese_braids-1.jpg",
+    "./assets/catalog/senegalese_braids-2.jpg",
+    "./assets/catalog/senegalese_braids-3.jpg"
+  ],
+  "high_braid_braids": [
+    "./assets/catalog/high_braid_braids-1.jpg",
+    "./assets/catalog/high_braid_braids-2.jpg",
+    "./assets/catalog/high_braid_braids-3.jpg",
+    "./assets/catalog/high_braid_braids-4.jpg",
+    "./assets/catalog/high_braid_braids-5.jpg"
+  ],
+  "kim_braid": [
+    "./assets/catalog/kim_braid-1.jpg",
+    "./assets/catalog/kim_braid-2.jpg",
+    "./assets/catalog/kim_braid-3.jpg"
+  ],
+  "two_separate_braids": [
+    "./assets/catalog/two_separate_braids-1.jpg",
+    "./assets/catalog/two_separate_braids-2.jpg",
+    "./assets/catalog/two_separate_braids-3.jpg",
+    "./assets/catalog/two_separate_braids-4.jpg",
+    "./assets/catalog/two_separate_braids-5.jpg"
+  ],
+  "four_braids_two_lower": [
+    "./assets/catalog/four_braids_two_lower-1.jpg",
+    "./assets/catalog/four_braids_two_lower-2.jpg"
+  ],
+  "six_braids_two_lower": [
+    "./assets/catalog/six_braids_two_lower-1.jpg"
+  ],
+  "thick_afro_braids": [
+    "./assets/catalog/thick_afro_braids-1.jpg",
+    "./assets/catalog/thick_afro_braids-2.jpg",
+    "./assets/catalog/thick_afro_braids-3.jpg",
+    "./assets/catalog/thick_afro_braids-4.jpg",
+    "./assets/catalog/thick_afro_braids-5.jpg",
+    "./assets/catalog/thick_afro_braids-6.jpg"
   ]
 }

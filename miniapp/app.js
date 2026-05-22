@@ -12,6 +12,7 @@ const genderField = document.querySelector("#gender-field");
 const genderChoices = document.querySelector("#gender-choices");
 const optionsField = document.querySelector("#options-field");
 const optionChoices = document.querySelector("#option-choices");
+const hairLengthNote = document.querySelector("#hair-length-note");
 const addonChoices = document.querySelector("#addon-choices");
 const scheduleStep = document.querySelector("#schedule-step");
 const slotChoices = document.querySelector("#slot-choices");
@@ -36,10 +37,25 @@ const state = {
   startTime: "",
 };
 
-function switchView(view) {
+function scrollToView(view) {
+  if (view === "home") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
+  document.querySelector(`[data-panel="${view}"]`)?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+
+function switchView(view, scroll = true) {
   appShell.dataset.view = view;
   tabs.forEach((tab) => tab.classList.toggle("is-active", tab.dataset.view === view));
   panels.forEach((panel) => panel.classList.toggle("is-active", panel.dataset.panel === view));
+  if (scroll) {
+    requestAnimationFrame(() => scrollToView(view));
+  }
 }
 
 function describeTelegramRuntime() {
@@ -222,6 +238,11 @@ function renderDetails() {
       `,
     )
     .join("");
+
+  hairLengthNote.hidden = !(
+    (state.service.id === "own_hair_braids" && state.genderId === "male")
+      || state.section?.id === "kanekalon_styles"
+  );
 
   addonChoices.innerHTML = state.catalog.addons
     .map(
@@ -485,5 +506,5 @@ jumps.forEach((button) => {
 });
 
 describeTelegramRuntime();
-switchView("home");
+switchView("home", false);
 loadCatalog();

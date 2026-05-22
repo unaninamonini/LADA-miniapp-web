@@ -270,33 +270,6 @@ h1 span {
   text-transform: uppercase;
 }
 
-.cover-mark {
-  bottom: 120px;
-  display: grid;
-  justify-items: end;
-  position: absolute;
-  right: 10px;
-  text-shadow: 0 3px 18px #000;
-  text-transform: uppercase;
-  z-index: 3;
-}
-
-.cover-mark strong {
-  color: rgba(255, 246, 241, 0.96);
-  font-family: "Arial Black", Impact, sans-serif;
-  font-size: 46px;
-  font-style: italic;
-  line-height: 0.9;
-}
-
-.cover-mark span {
-  border-top: 1px solid var(--line-bright);
-  color: var(--muted);
-  font-size: 10px;
-  font-weight: 900;
-  padding-top: 5px;
-}
-
 .workspace {
   margin: 0 auto;
   max-width: 980px;
@@ -337,6 +310,7 @@ h1 span {
 
 .view {
   display: none;
+  scroll-margin-top: 74px;
 }
 
 .view.is-active {
@@ -676,6 +650,16 @@ h3 {
   font-size: 11px;
   font-weight: 950;
   text-transform: uppercase;
+}
+
+.hair-length-note {
+  background: rgba(255, 244, 239, 0.1);
+  border: 1px solid var(--line-bright);
+  color: var(--blush);
+  font-size: 13px;
+  font-weight: 850;
+  margin-bottom: 14px;
+  padding: 11px;
 }
 
 input,
