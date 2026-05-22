@@ -1,0 +1,283 @@
+{
+  "sections": [
+    {
+      "id": "braids",
+      "name": "Брейды",
+      "services": [
+        {
+          "id": "own_hair_braids",
+          "name": "Брейды из своих волос",
+          "description": "Плетение брейдов из своих волос. Время плетения 1 час-2 часа, срок носки 5-7 дней.",
+          "wear_time": "5-7 дней",
+          "duration_min": 60,
+          "duration_max": 120,
+          "photos": ["AgACAgIAAxkBAAMUag6hAeOGRW76Jmo7vGm1pL-G8LAAAiYbaxvNhFFI49KNhZRFSrABAAMCAAN4AAM7BA",
+            "AgACAgIAAxkBAAMSag6hAaucxS4IZ_eqr0b6y0sKNP4AAiQbaxvNhFFIIUdUYAbYbzoBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMTag6hAfxYxL0RNuxAWFD1Wi7Sq-4AAiIbaxvNhFFI_oUiBQWhtaQBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMYag6hAVHJG92jK-ju82tBm-cSbjcAAiobaxvNhFFIoG-np2SWlEoBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMaag6hARBKYRCufLePtLaS2CphaF0AAiwbaxvNhFFIYWS0i9sZltcBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMWag6hAaUyoJB0aCnws4LHsmBqQxcAAigbaxvNhFFI2H-d17x3xlYBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMXag6hAVk5Uc1UzreBfCf0sqRbocwAAikbaxvNhFFIgClyIOHHEZIBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMZag6hARBqCwRec-yzxvD-J_CIzVcAAisbaxvNhFFIoPXj1YlL9EwBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMbag6hAdprm3Z-6EV4H2hL8_v6-fIAAiMbaxvNhFFI5-ZxhJ1NBykBAAMCAAN5AAM7BA",
+            "AgACAgIAAxkBAAMVag6hAY4mN9vAXtqfbyrxthnvQbAAAicbaxvNhFFIRaM7T3hVPG0BAAMCAAN5AAM7BA"
+          ],
+          "options": [
+            {"id": "6", "name": "6 шт", "price": 4200, "duration_minutes": 60},
+            {"id": "8", "name": "8 шт", "price": 4700, "duration_minutes": 75},
+            {"id": "10", "name": "10 шт", "price": 5200, "duration_minutes": 90},
+            {"id": "12", "name": "12 шт", "price": 5500, "duration_minutes": 105},
+            {"id": "16", "name": "16 шт", "price": 6500, "duration_minutes": 120}
+          ]
+        },
+        {
+          "id": "kanekalon_braids",
+          "name": "Брейды с канекалоном",
+          "description": "Брейды с добавлением канекалона. Время плетения 2 часа-2 часа 30 минут, срок носки 10-14 дней.",
+          "wear_time": "10-14 дней",
+          "duration_min": 120,
+          "duration_max": 150,
+          "photos": ["AgACAgUAAxkBAAIBNGoIhl6G-Scjrkd1XE_iQaLoN4eVAALHEWsbcVdJVKxnm_yrBBPGAQADAgADeQADOwQ",
+          "AgACAgUAAxkBAAIBLGoIhXZK9ajTJ9UJaqiw7MvLFJZ0AALDEWsbcVdJVL53c4LczyonAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDTWoLMn5Pyp8KuQSjRuEZPee6lzAVAAI2G2sbzYRRSCFHcEkvjYoLAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDVGoLMn_1iVgyEoi3GWpQt2WTE-pxAAI7G2sbzYRRSBc1fHI_B81KAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDUGoLMn6XVdHpHoR3oVA2HbRUF0hbAAI4G2sbzYRRSGJD7F0WbA5PAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDUmoLMn7JfPGW4-5YOggyqp1io_GwAAI6G2sbzYRRSEj-_7KyK-rZAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDTmoLMn54KGbvg55BUjlgyqFM_-p3AAI3G2sbzYRRSHM2lo33lDfNAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDU2oLMn8jrYxYQu1Al17HpAxxcXO8AAI0G2sbzYRRSM5RdjPLOQSZAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDUWoLMn6vp_mf1Z3eCgF2Ba6pFRslAAI5G2sbzYRRSFVDSM1eqLsNAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDT2oLMn7ccEfhVH7yOCfy8RGz2AcqAAIzG2sbzYRRSDYEkQTTI5qJAQADAgADeQADOwQ",
+          "AgACAgUAAxkBAAIDbWoLNFMtsY_gNM7zrT2-4eonJa_AAAICFWsbKDJZVB1RR5VJDqaLAQADAgADeQADOwQ"],
+          "options": [
+            {"id": "6", "name": "6 шт", "price": 7000, "duration_minutes": 120},
+            {"id": "7", "name": "7 шт", "price": 7500, "duration_minutes": 130},
+            {"id": "8", "name": "8 шт", "price": 8000, "duration_minutes": 140},
+            {"id": "9", "name": "9 шт", "price": 8500, "duration_minutes": 150},
+            {"id": "10", "name": "10 шт", "price": 8500, "duration_minutes": 150},
+            {"id": "11_12", "name": "11-12 шт", "price": 9000, "duration_minutes": 150}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kanekalon_styles",
+      "name": "Прически с канекалоном",
+      "services": [
+
+        {
+          "id": "sphinx",
+          "name": "Сфинкс",
+          "description": "Сфинкс с канекалоном. Время плетения около 2 часов, срок носки 5-7 дней.",
+          "wear_time": "5-7 дней",
+          "duration_min": 120,
+          "duration_max": 120,
+          "price_from": 6500,
+          "photos": ["AgACAgIAAxkBAAIDx2oNSwUdr-KsoN4lUv6pYeXSugRiAAJWG2sbzYRRSMGbroaeSjKUAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDymoNSwU1xUq4apmI_AABWjNNzZFrgwACWBtrG82EUUhebFFwYYZdIAEAAwIAA3kAAzsE",
+          "AgACAgIAAxkBAAIDyWoNSwWb6ecPTVWGH4AhRX0jx3qrAAJXG2sbzYRRSBfqcuRFGAUTAQADAgADeAADOwQ"]
+        },
+        {
+          "id": "high_tail",
+          "name": "Высокий хвост",
+          "description": "Высокий хвост с канекалоном. Время плетения около 1 часа 20 минут.",
+          "wear_time": "индивидуально",
+          "duration_min": 80,
+          "duration_max": 80,
+          "price_from": 5200,
+          "photos": ["AgACAgIAAxkBAAIDk2oNMtW1_u9qGsCElZpZYimG1i2ZAAJbG2sbzYRRSDh6ysGE9p91AQADAgADeQADOwQ","AgACAgIAAxkBAAIDlWoNMtXZeeZYnspnG1AiOPKc_EnNAAJaG2sbzYRRSJCfyT0MQ2EYAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDlGoNMtV1fCeyrnPxY0q6sOc_kTZ-AAJZG2sbzYRRSMxDZTtSnT2iAQADAgADeQADOwQ"
+          ]
+        },
+        {
+          "id": "creative",
+          "name": "Креатив",
+          "description": "Креативная прическа. Цена и время зависят от запроса, уточните у мастера.",
+          "wear_time": "индивидуально",
+          "duration_min": null,
+          "duration_max": null,
+          "price_from": null,
+          "photos": ["AgACAgIAAxkBAAIDrWoNSjyHROaynxHoWEdiIHLNY3dPAAJlG2sbzYRRSIJTmnvP330oAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDtGoNSjyW-S7XbgABNYPU5BZSIzz6oQACahtrG82EUUjiOSRV5u30AwEAAwIAA3kAAzsE",
+          "AgACAgIAAxkBAAIDrmoNSjyP3IG4b73i_RJJbPk2u4hvAAJQHGsbySJRSGibw8RP9O91AQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDsGoNSjxiAcB-T8xq_X1jJ9BoL01OAAJnG2sbzYRRSC3uhl64I3C_AQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDtmoNSjxEiS73uKAsGxKygZeMvw6IAAJsG2sbzYRRSC8FsNe7MBUzAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDsmoNSjw8ObqJPx5YHcLHdxiyIV9oAAJoG2sbzYRRSM0DS6S1_90NAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDr2oNSjzX9e_ie0W-w6Pb21YjAnEUAAJkG2sbzYRRSO_IV_SwtrsVAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDtWoNSjyQ5Se3lobrB-kberoqDTzKAAJrG2sbzYRRSKFkVC3OSIxEAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDsWoNSjxP5C5ZUJ3ExzZXSl-lDQ2GAAJmG2sbzYRRSEPzbvP13VqGAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDs2oNSjyFaT2ZTltnzJa9lISbUu2qAAJpG2sbzYRRSNGuQe0DoQYUAQADAgADeQADOwQ"]},
+        {
+          "id": "afro_styling",
+          "name": "Афроукладка",
+          "description": "Афроукладка. Время плетения около 2 часов 30 минут, срок носки до следующего мытья головы.",
+          "wear_time": "до следующего мытья головы",
+          "duration_min": 150,
+          "duration_max": 150,
+          "price_from": 4200,
+          "photos": ["AgACAgIAAxkBAAIDqWoNSgoqO5f9hagGrtK1EDatq2NvAAJxG2sbzYRRSFo0mdf6_wcZAQADAgADeQADOwQ",
+            "AgACAgIAAxkBAAIDqmoNSgovQOfP6tABHCBUuachMznQAAJyG2sbzYRRSLsDccSfNq-9AQADAgADeQADOwQ"
+          ]
+        },
+        {
+          "id": "senegalese_braids",
+          "name": "Сенегальские косы",
+          "description": "Сенегальские косы. Время плетения около 2 часов 30 минут, срок носки до следующего мытья головы.",
+          "wear_time": "до следующего мытья головы",
+          "duration_min": 150,
+          "duration_max": 150,
+          "price_from": 5200,
+          "photos": ["AgACAgIAAxkBAAIDo2oNSdUTe2ImMLPQW0jQfVqwUKkuAAJ3G2sbzYRRSHEqPGE2u65XAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDpWoNSdW5hEnmOKD6YlQ8MEdJWNH9AAJ4G2sbzYRRSG2urhTxyZ8hAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDpGoNSdXz9l5FmC292H8wu44cuJcrAAJ2G2sbzYRRSGhGaXzTb_cVAQADAgADeQADOwQ"]
+        },
+        {
+          "id": "high_braid_braids",
+          "name": "Брейды в высокую косу",
+          "description": "Высокая коса с проплетением брейдов. Время плетения около 1 часа 10 минут, срок носки 5-7 дней.",
+          "wear_time": "5-7 дней",
+          "duration_min": 70,
+          "duration_max": 70,
+          "price_from": 5200,
+          "photos":["AgACAgIAAxkBAAIDYGoLMy05L1ECCOE5KcyG7tQuH-vKAAI-G2sbzYRRSI3WiIbCuCkrAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDXmoLMy1q3JN374ZU1GzG4tXm-8VjAAI9G2sbzYRRSAdqCMGxhApEAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDXWoLMy06SbTNYZJiOCgv3OdBciK8AAI8G2sbzYRRSJKzGYdJqMyNAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDYWoLMy2KV7gKaxA6b-cGBfcGbrWOAAI_G2sbzYRRSP9e33JrpCufAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDX2oLMy2eQnV3j_AosOTWrVIoOQ7EAAJAG2sbzYRRSIg4BNXPZGELAQADAgADeQADOwQ"]
+        },
+        {
+          "id": "kim_braid",
+          "name": "Коса Ким",
+          "description": "Коса Ким. Время плетения около 40 минут, срок носки 1-3 дня.",
+          "wear_time": "1-3 дня",
+          "duration_min": 40,
+          "duration_max": 40,
+          "price_from": 4200,
+          "photos": ["AgACAgIAAxkBAAIDZ2oLM-klGvgBlXdT3qLy34EfnGOxAAJBG2sbzYRRSNOWemJfzPiKAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDaWoLM-mJla9BVSyOnvdEeGdqEqfTAAJCG2sbzYRRSM6yKJuElIDvAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDaGoLM-lLGKfFbuyZedjyOUfK6yjhAAJDG2sbzYRRSGDD2vQIA1qRAQADAgADeQADOwQ"]
+        },
+        {
+          "id": "two_separate_braids",
+          "name": "2 отдельные косы",
+          "description": "2 отдельные косы. Время плетения около 1 часа, срок носки до 3 дней.",
+          "wear_time": "до 3 дней",
+          "duration_min": 60,
+          "duration_max": 60,
+          "price_from": 6200,
+          "photos": ["AgACAgIAAxkBAAIDe2oLNUMeM7rgWimgnTSj2yhRh_sEAAJfG2sbzYRRSOVoKy41OPwCAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDfWoLNUMkpUHDx6hbtVmnk5QtMeq0AAJgG2sbzYRRSJ6eabFeG2cdAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDf2oLNUPzuUgblF2Gd6qWB6QVN0cYAAJiG2sbzYRRSN2vOI0HVxhqAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDfmoLNUM6lg0Q_3sI1Va3PRrAN6WZAAJhG2sbzYRRSOA1PwABe6uoNAEAAwIAA3kAAzsE",
+          "AgACAgIAAxkBAAIDfGoLNUPyDCZeoEdpYMBXlplnBuD9AAJeG2sbzYRRSBrbZP1ZLHOzAQADAgADeQADOwQ"]
+        },
+        {
+          "id": "four_braids_two_lower",
+          "name": "4 брейда в 2 нижние косы",
+          "description": "4 брейда в 2 нижние косы. Время плетения около 1 часа 30 минут, срок носки до 7 дней.",
+          "wear_time": "до 7 дней",
+          "duration_min": 90,
+          "duration_max": 90,
+          "price_from": 6500,
+          "photos": ["AgACAgIAAxkBAAIDj2oNMloZhQKn7fYT5TyQH2BYLDeMAAJ0G2sbzYRRSCKH_Zgi1LI1AQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDkGoNMlqMSM8xohTJBXXm_iCTLFgQAAJzG2sbzYRRSJ2SPD1N0y9eAQADAgADeQADOwQ"]
+        },
+        {
+          "id": "six_braids_two_lower",
+          "name": "6 брейдов в 2 нижние косы",
+          "description": "6 брейдов в 2 нижние косы. Время плетения около 2 часов, срок носки 5-7 дней.",
+          "wear_time": "5-7 дней",
+          "duration_min": 120,
+          "duration_max": 120,
+          "price_from": 6500,
+          "photos": ["AgACAgUAAxkBAAIDjWoNMcoszji5xvy_1dEsoPLjec-cAALcDmsbBrBpVBjwD1CxhTUmAQADAgADeQADOwQ"
+          ]
+        },
+        {
+          "id": "thick_afro_braids",
+          "name": "Утолщенные афрокосы",
+          "description": "Утолщенные афрокосы. Время плетения около 3 часов-3 часа 30 минут, срок носки 2-4 недели.",
+          "wear_time": "2-4 недели",
+          "duration_min": 180,
+          "duration_max": 210,
+          "price_from": 10500,
+          "photos": ["AgACAgIAAxkBAAIDb2oLNJNQ1ip7DF-Wj2Esoc0jYlS2AAJPG2sbzYRRSNEVc0lSEa4FAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDcGoLNJPbkN7KoK_0EigdaBPZnVIcAAJQG2sbzYRRSAoqA3akIRLoAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDcmoLNJMyimg4yV7V6esxY0Pu7yl1AAJRG2sbzYRRSDMFmIAGd8dnAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDdGoLNJOkAVEYmSUIzWVzRxdqOl8vAAJvG2sbzYRRSPpJ-stYNKazAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDcWoLNJNmFftZwztbHxN0z2HNURPaAAJOG2sbzYRRSPHnr5PYAtIzAQADAgADeQADOwQ",
+          "AgACAgIAAxkBAAIDc2oLNJMnQ_UsUC_6AAF83vALLI39qwACUhtrG82EUUjCG7IGc5buOAEAAwIAA3kAAzsE"]
+        }
+      ]
+    }
+  ],
+  "addons": [
+    {
+      "id": "face_braids_2",
+      "name": "Маленькие косички у лица — 2 шт",
+      "description": "Плетутся из канекалона, отстригаются в любой момент.",
+      "price": 400,
+      "duration_minutes": 15
+    },
+    {
+      "id": "face_braids_4",
+      "name": "Маленькие косички у лица — 4 шт",
+      "description": "Плетутся из канекалона, отстригаются в любой момент.",
+      "price": 600,
+      "duration_minutes": 25
+    },
+    {
+      "id": "rings",
+      "name": "Украшение колечки",
+      "description": "Украшение колечками.",
+      "price": 0,
+      "duration_minutes": 0
+    },
+    {
+      "id": "home_visit_moscow",
+      "name": "Выезд дом/фотостудия — Москва",
+      "description": "Выезд мастера по Москве.",
+      "price": 2000,
+      "duration_minutes": 0
+    },
+    {
+      "id": "home_visit_region",
+      "name": "Выезд дом/фотостудия — МО",
+      "description": "Выезд мастера по Московской области.",
+      "price": 3500,
+      "duration_minutes": 0
+    }
+  ],
+  "portfolio_sections": [
+    {
+      "id": "men",
+      "name": "Мужчины",
+      "description": "мужжжжччиныы мммммм",
+      "photos": ["AgACAgIAAxkBAAIDQ2oLMTQzUYKG6qLUoeF_dllEMJ-jAAIrG2sbzYRRSFhZsv1bwWKLAQADAgADeQADOwQ",
+      "AgACAgIAAxkBAAIENGoNTQ85Q3-G29v1NMGWcLbnYVBsAAKCG2sbzYRRSNiUYXyDZ2BXAQADAgADeAADOwQ",
+      "AgACAgIAAxkBAAIEMGoNTQ8dJRlYgyvBuRwFCCnlds1TAAKFG2sbzYRRSFwZtlFz3i1KAQADAgADeQADOwQ",
+      "AgACAgIAAxkBAAIELmoNTQ-zAwNCRr-EXUd1S-Ys49_ZAAKAG2sbzYRRSJkhQtMT2MQBAQADAgADeQADOwQ",
+      "AgACAgIAAxkBAAIEMmoNTQ8ToZRL9S6sJUvk9wABwG8BkwAChxtrG82EUUh7HmF9kDQ7SgEAAwIAA3kAAzsE",
+      "AgACAgIAAxkBAAIEM2oNTQ-jlHRQQcfdpHb9DnJHFPKpAAKIG2sbzYRRSAsDHeP_7u47AQADAgADeQADOwQ",
+      "AgACAgIAAxkBAAIENWoNTQ_yNIrShLXDMmGhCnDZdf8MAAKDG2sbzYRRSGvH-A0Hz-VDAQADAgADeQADOwQ",
+      "AgACAgIAAxkBAAIEMWoNTQ-pam1FVQh8wUC2CQ6kuC_3AAKGG2sbzYRRSMPQi2QcG7PKAQADAgADeAADOwQ",
+      "AgACAgIAAxkBAAIELWoNTQ8Y06jp6wGj7r2Yu-5AgHNnAAKEG2sbzYRRSI0GHaDPIJ_EAQADAgADeAADOwQ",
+      "AgACAgIAAxkBAAIEL2oNTQ_x6qwI_NosSs-g7gI6F25TAAKBG2sbzYRRSHZuTiFvOhfZAQADAgADeQADOwQ"]
+    }
+  ],
+  "masterclass": {
+    "title": "Обучение",
+    "description": "В обучение входят:\n- теоретический материал\n- подарочный базовый набор инструментов для плетения\n- отработка на манекене\n- отработка на модели\n\nСтоимость уточняется индивидуально в зависимости от запроса, напишите Верховной — @moonlightchilld.",
+    "directions": [
+      {
+        "id": "braids",
+        "name": "Брейды"
+      },
+      {
+        "id": "kanekalon_styles",
+        "name": "Прически с канекалоном"
+      }
+    ],
+    "price": null,
+    "duration_minutes": 180
+  }
+}

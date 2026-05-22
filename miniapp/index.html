@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LADA Mini App</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="cover">
+        <div class="cover-media" aria-hidden="true">
+          <img class="cover-portrait" src="./assets/braids-cover-ref.png" alt="" />
+          <img class="cover-scrap cover-scrap-a" src="./assets/editorial-collage-ref.png" alt="" />
+          <img class="cover-scrap cover-scrap-b" src="./assets/select-ui-ref.png" alt="" />
+        </div>
+        <div class="cover-copy">
+          <p class="eyebrow">braid studio // mini app</p>
+          <h1><span>LADA</span> Braids</h1>
+          <p class="lede">Glossy braids, sharp slots, main-character finish.</p>
+          <div class="cover-actions">
+            <button class="chrome-action" data-jump="booking" type="button">Записаться</button>
+            <button class="ghost-action" data-jump="catalog" type="button">Каталог</button>
+          </div>
+        </div>
+        <div class="cover-badges" aria-hidden="true">
+          <span>Y2K</span>
+          <span>chrome</span>
+          <span>glam</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="runtime-strip">
+          <div>
+            <small>Telegram user</small>
+            <strong id="telegram-user">Не передан</strong>
+          </div>
+          <div>
+            <small>Theme</small>
+            <strong id="telegram-theme">Системная</strong>
+          </div>
+          <p class="mode" id="runtime-mode">Browser preview</p>
+          <button id="ready-button" type="button">Связь с ботом</button>
+        </section>
+
+        <nav class="tabs" aria-label="Разделы Mini App">
+          <button class="tab is-active" data-view="home" type="button">Cover</button>
+          <button class="tab" data-view="catalog" type="button">Каталог</button>
+          <button class="tab" data-view="booking" type="button">Запись</button>
+        </nav>
+
+        <section class="view is-active" data-panel="home">
+          <section class="poster-grid">
+            <article class="feature-tile chrome-tile">
+              <p>01</p>
+              <h2>Собери образ</h2>
+              <span>брейды, канекалон, допы</span>
+            </article>
+            <article class="feature-tile glam-tile">
+              <p>02</p>
+              <h2>Поймай слот</h2>
+              <span>выбор даты и времени</span>
+            </article>
+            <article class="feature-tile ui-tile">
+              <img src="./assets/void-ui-ref.png" alt="" />
+              <strong>poster mode</strong>
+            </article>
+          </section>
+        </section>
+
+        <section class="view" data-panel="catalog">
+          <div class="catalog-stage">
+            <header>
+              <p class="eyebrow">select your braid era</p>
+              <h2>Каталог</h2>
+            </header>
+            <div class="service-list catalog-list" id="catalog-list"></div>
+          </div>
+        </section>
+
+        <section class="view" data-panel="booking">
+          <div class="booking-shell">
+            <header class="booking-head">
+              <p class="eyebrow">booking flow</p>
+              <h2>Запись</h2>
+            </header>
+            <form id="booking-form">
+              <section class="form-step">
+                <h3>1. Услуга</h3>
+                <div class="choice-grid" id="section-choices"></div>
+                <div class="service-list" id="service-choices"></div>
+              </section>
+
+              <section class="form-step" id="detail-step" hidden>
+                <h3>2. Параметры</h3>
+                <div class="field" id="gender-field" hidden>
+                  <span>Тип брейдов</span>
+                  <div class="choice-grid" id="gender-choices">
+                    <button data-gender="female" type="button">Женские</button>
+                    <button data-gender="male" type="button">Мужские</button>
+                  </div>
+                </div>
+                <div class="field" id="options-field" hidden>
+                  <span>Вариант</span>
+                  <div class="choice-grid" id="option-choices"></div>
+                </div>
+                <div class="field">
+                  <span>Допы</span>
+                  <div class="addon-list" id="addon-choices"></div>
+                </div>
+              </section>
+
+              <section class="form-step" id="schedule-step" hidden>
+                <h3>3. Дата и время</h3>
+                <label class="field">
+                  <span>Дата</span>
+                  <input id="booking-date" type="date" required />
+                </label>
+                <div class="field">
+                  <span>Время</span>
+                  <div class="slot-grid" id="slot-choices"></div>
+                </div>
+              </section>
+
+              <section class="form-step" id="contact-step" hidden>
+                <h3>4. Контакт</h3>
+                <label class="field">
+                  <span>Имя</span>
+                  <input id="client-name" autocomplete="name" required />
+                </label>
+                <label class="field">
+                  <span>Телефон или @username</span>
+                  <input id="client-contact" autocomplete="tel" required />
+                </label>
+                <label class="field">
+                  <span>Комментарий</span>
+                  <textarea id="client-comment" rows="3" placeholder="Цвет, пожелания, референс"></textarea>
+                </label>
+                <p class="hint">Фото волос пока отправьте мастеру в чат после заявки.</p>
+              </section>
+
+              <aside class="summary" id="booking-summary"></aside>
+              <button class="primary" id="submit-booking" type="submit" disabled>
+                Отправить заявку
+              </button>
+              <p class="status" id="booking-status" role="status"></p>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
