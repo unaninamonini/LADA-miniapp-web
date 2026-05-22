@@ -73,9 +73,10 @@ p {
 }
 
 .cover {
+  aspect-ratio: 4 / 5;
   margin: 0 auto;
   max-width: 980px;
-  min-height: min(1040px, 100svh);
+  min-height: 0;
   overflow: hidden;
   position: relative;
 }
@@ -318,24 +319,6 @@ h3 {
   object-fit: cover;
   object-position: center top;
   width: 100%;
-}
-
-.star-poster-lede {
-  backdrop-filter: blur(10px);
-  background: linear-gradient(90deg, rgba(7, 3, 7, 0.72), rgba(7, 3, 7, 0.24));
-  border-left: 1px solid rgba(255, 244, 239, 0.34);
-  color: var(--paper);
-  font-size: clamp(18px, 4.8vw, 28px);
-  font-weight: 950;
-  left: 20px;
-  line-height: 1.08;
-  margin: 0;
-  max-width: min(82vw, 560px);
-  padding: 14px;
-  position: absolute;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.86);
-  top: 20px;
-  z-index: 1;
 }
 
 .star-poster-controls {
