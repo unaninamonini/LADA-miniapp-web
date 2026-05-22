@@ -74,9 +74,10 @@ p {
 
 .cover-stage {
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto minmax(170px, 1fr);
   margin: 0 auto;
   max-width: 980px;
+  min-height: 100svh;
   position: relative;
 }
 
@@ -128,25 +129,27 @@ p {
 .cover-transition {
   align-content: end;
   background:
-    radial-gradient(circle at 24% 0%, rgba(255, 73, 40, 0.18), transparent 42%),
-    radial-gradient(circle at 82% 100%, rgba(221, 120, 132, 0.12), transparent 46%),
+    radial-gradient(circle at 24% 2%, rgba(255, 73, 40, 0.46), transparent 35%),
+    radial-gradient(circle at 78% 92%, rgba(255, 217, 207, 0.34), transparent 42%),
     linear-gradient(
       180deg,
       #070307 0%,
-      rgba(24, 4, 11, 0.98) 38%,
-      rgba(44, 10, 20, 0.98) 100%
+      rgba(57, 8, 19, 0.98) 28%,
+      rgba(143, 53, 70, 0.94) 64%,
+      rgba(218, 153, 142, 0.84) 100%
     );
   display: grid;
   isolation: isolate;
+  min-height: 170px;
   overflow: hidden;
-  padding: 8px 0 10px;
+  padding: clamp(18px, 5svh, 44px) 0 18px;
   position: relative;
 }
 
 .cover-transition::before {
   background:
-    linear-gradient(112deg, transparent 0 24%, rgba(255, 244, 239, 0.09) 38%, transparent 52%),
-    repeating-linear-gradient(180deg, transparent 0 68px, rgba(255, 230, 222, 0.04) 68px 69px);
+    linear-gradient(112deg, transparent 0 24%, rgba(255, 244, 239, 0.2) 38%, transparent 52%),
+    repeating-linear-gradient(180deg, transparent 0 68px, rgba(255, 230, 222, 0.07) 68px 69px);
   content: "";
   inset: 0;
   pointer-events: none;
